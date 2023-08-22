@@ -1,0 +1,13 @@
+{% block content %}
+<html>
+    <head>
+    <title>Home</title>
+    </head>
+    <body>
+        <h1>Our Book genres</h1>
+        {% for genre in genres %}
+        <a href="{% url 'genre' genre.id %}"><h3>{{ genre.name }}</h3></a>
+        {% endfor %}
+    </body>
+</html>
+{% endblock %}
